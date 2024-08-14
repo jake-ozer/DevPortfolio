@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jake Ozer</title>
+    <style>
+        @font-face {
+            font-family: Arcon;
+            src: url(Arcon-Regular.otf);
+        }
+
+        body {
+            background-color:#eaeaea;
+            display: flex;
+            flex-direction: column;
+            font-family: Arcon;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .nav-right a {
+            padding: 10px;
+        }
+       
+
+        .content {
+            text-align: center;
+            width: 60%;
+            margin: auto;
+        }
+
+        h1,h2,h3 {
+            font-weight: normal;
+        }
+
+        h2, h3 {
+            font-size: larger;
+        }
+
+        .breakline {
+            width: 70%;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 37.5%; 
+            height: 0;
+            overflow: hidden;
+            max-width: 66.75%; 
+            margin: auto; 
+            background: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .project-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .project {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            padding: 10px;
+            background: #eaeaea;
+        }
+
+        .project:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .project:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .project img {
+            object-fit: cover;
+            margin: 10px;
+        }
+
+        .project img.size1 {
+            width: 300px;
+            height: 200px;
+        }
+
+        .project img.size2 {
+            width: 320px;
+            height: 260px;
+        }
+
+        .project img.size3 {
+            width: 350px;
+            height: 230px;
+        }
+
+        .project img.size4 {
+            width: 320px;
+            height: 260px;
+        }
+
+        .project img.size5 {
+            width: 310px;
+            height: 300px;
+        }
+
+        .project img.size6 {
+            width: 300px;
+            height: 200px;
+        }
+
+        .project-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .project-content h4 {
+            margin: 0 0 10px 0;
+        }
+
+        .project-content p {
+            margin: 0;
+        }
+
+        ul {
+            text-align: left;
+        }
+
+        .bullet-container {
+            display: flex;
+        }
+
+        .bullet-container img {
+            margin: 20px;
+        }
+
+        .level-gen-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .image-gal {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .image-gal img {
+            width: 100%;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-left">
+        <p>Jake Ozer | jakobozer1@gmail.com | (630) 258-0136</p>
+    </div>
+    <div class="nav-right">
+        <a href="index.html">Home</a>
+        <a href="index.html#proj-header">Projects</a>
+    </div>
+</nav>
+
+<div class="content">
+   <h1>A* Pathfinding Simulator</h1>
+   <h2>Unity, C#</h2>
+   <p>An algorithmic simulator demonstrating how the A* pathfinding algorithm acts on a grid based graph. This was created as a hobby project by myself due to an interest in the algorithm after completing a 1600 word research paper about it in my Data Structures and Algorithms course.
+    <br><br>
+    The big focuses for this project were creating a clean user interface and allowing for animations to be paused/slowed down in an effort to make this a useful and satisfying educational tool.</p>
+   <a href="https://lax919.itch.io/a-pathfinding-simulator" target="_blank">Link to play/download</a>
+   <hr>
+   <ul>
+    <div class="bullet-container">
+        <li>Specifics of Algorithm<br><br>This implementation weighs its edges by 10 for cardinal movement and 14 for diagonal movement. The heuristic is calculated using the diagonal distance formula as follows:<br><br>
+            <i>
+            dx =  |x1 - x2|<br>
+            dy =  |y1 - y2|<br>
+            h(n) =  max(dx, dy) + (√2-1) * min(dx, dy)<br>
+            </i><br>
+            If you want a full detailed explanation on the algorithm, feel free to download <a href="IT 279 A_ research paper.pdf">my research paper on A*</a> completed in my Data Structures and Algorithms class, that did receive an A from my professor.
+        </li>
+        <img src="astarsc/algoex.png" width="330" height="200">
+    </div>
+
+    <div class="image-gal">
+        <img src="astarsc/sc (2).png" width="330" height="200">
+        <img src="astarsc/sc (1).png" width="330" height="200">
+        <img src="astarsc/sc (4).png" width="330" height="200">
+        <img src="astarsc/sc (3).png" width="330" height="200">
+    </div>
+   
+   </ul>
+</div>
+
+<footer>
+    <p>External Links: Check out my <a href="https://www.linkedin.com/in/jake-ozer-966878262/" target="_blank">LinkedIn</a>, <a href="https://github.com/jake-ozer" target="_blank">GitHub</a> and <a href="https://lax919.itch.io" target="_blank">itch.io</a></p>
+</footer>
+
+</body>
+</html>

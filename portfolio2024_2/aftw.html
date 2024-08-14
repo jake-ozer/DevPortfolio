@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jake Ozer</title>
+    <style>
+        @font-face {
+            font-family: Arcon;
+            src: url(Arcon-Regular.otf);
+        }
+
+        body {
+            background-color:#eaeaea;
+            display: flex;
+            flex-direction: column;
+            font-family: Arcon;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .nav-right a {
+            padding: 10px;
+        }
+       
+
+        .content {
+            text-align: center;
+            width: 60%;
+            margin: auto;
+        }
+
+        h1,h2,h3 {
+            font-weight: normal;
+        }
+
+        h2, h3 {
+            font-size: larger;
+        }
+
+        .breakline {
+            width: 70%;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 37.5%; 
+            height: 0;
+            overflow: hidden;
+            max-width: 66.75%; 
+            margin: auto; 
+            background: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .project-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .project {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            padding: 10px;
+            background: #eaeaea;
+        }
+
+        .project:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .project:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .project img {
+            object-fit: cover;
+            margin: 10px;
+        }
+
+        .project img.size1 {
+            width: 300px;
+            height: 200px;
+        }
+
+        .project img.size2 {
+            width: 320px;
+            height: 260px;
+        }
+
+        .project img.size3 {
+            width: 350px;
+            height: 230px;
+        }
+
+        .project img.size4 {
+            width: 320px;
+            height: 260px;
+        }
+
+        .project img.size5 {
+            width: 310px;
+            height: 300px;
+        }
+
+        .project img.size6 {
+            width: 300px;
+            height: 200px;
+        }
+
+        .project-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .project-content h4 {
+            margin: 0 0 10px 0;
+        }
+
+        .project-content p {
+            margin: 0;
+        }
+
+        ul {
+            text-align: left;
+        }
+
+        .bullet-container {
+            display: flex;
+        }
+
+        .bullet-container img {
+            margin: 20px;
+        }
+
+        .image-gal {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .image-gal img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-left">
+        <p>Jake Ozer | jakobozer1@gmail.com | (630) 258-0136</p>
+    </div>
+    <div class="nav-right">
+        <a href="index.html">Home</a>
+        <a href="index.html#proj-header">Projects</a>
+    </div>
+</nav>
+
+<div class="content">
+   <h1>Alchemy for the Wicked</h1>
+   <h2>Unity, C#</h2>
+   <p>A first person puzzle game about brewing poisons for the evil denizens of a fantasy world. Created in one week for game dev club's Summer 2024 game jam with a team of four, I served as the team's lead programmer and secondary designer.<br><br>
+    My biggest highlights on this project included creating a clean and practical ingredient system for the backend, developing the in-game alchemy book UI/camera system, and designing the main gameplay loop. </p>
+   <a href="https://lax919.itch.io/alchemy-for-the-wicked" target="_blank">Link to play/download</a>
+   <hr>
+   <ul>
+    <div class="bullet-container">
+        <li>Ingredient System:<br><br>All ingredients in the game were implemented with Unity's Scriptable Object data containers. This allowed us to simply define what data was needed for each "ingredient type", which could then be applied to all of our other game systems. For example, an ingredient like lavender needed a name, description, and icon. Once those were assigned in the inspector, it would automatically update wherever lavender's data was needed in the project, like the in game information book or the in the poison brewing system.
+        </li>
+        <img src="aftw_media/bp1.png" width="350" height="200">
+    </div>
+    <div class="bullet-container">
+        <li>Alchemy Book UI:<br><br>In order to research which ingredients were needed to fill an order, the player needed to access an ingredient book to learn what properties might combine to create a poison effect. The book UI elements function in a world space canvas that works with the ingredient system to display all of its information neatly. When accessing the book, the camera's position is interpolated between its access point and a camera spot transform to create a smooth transition. 
+        </li>
+        <img src="aftw_media/bp2.gif" width="350" height="200">
+    </div>
+   </ul>
+
+   <div class="image-gal">
+    <img src="aftw_media/sc1.png" width="330" height="200">
+    <img src="aftw_media/sc2.png" width="330" height="200">
+    <img src="aftw_media/sc3.png" width="330" height="200">
+    <img src="aftw_media/sc4.png" width="330" height="200">
+    </div>
+
+</div>
+
+<footer>
+    <p>External Links: Check out my <a href="https://www.linkedin.com/in/jake-ozer-966878262/" target="_blank">LinkedIn</a>, <a href="https://github.com/jake-ozer" target="_blank">GitHub</a> and <a href="https://lax919.itch.io" target="_blank">itch.io</a></p>
+</footer>
+
+</body>
+</html>

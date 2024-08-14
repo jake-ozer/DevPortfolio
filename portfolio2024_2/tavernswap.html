@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jake Ozer</title>
+    <style>
+        @font-face {
+            font-family: Arcon;
+            src: url(Arcon-Regular.otf);
+        }
+
+        body {
+            background-color:#eaeaea;
+            display: flex;
+            flex-direction: column;
+            font-family: Arcon;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .nav-right a {
+            padding: 10px;
+        }
+       
+
+        .content {
+            text-align: center;
+            width: 60%;
+            margin: auto;
+        }
+
+        h1,h2,h3 {
+            font-weight: normal;
+        }
+
+        h2, h3 {
+            font-size: larger;
+        }
+
+        .breakline {
+            width: 70%;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 37.5%; 
+            height: 0;
+            overflow: hidden;
+            max-width: 66.75%; 
+            margin: auto; 
+            background: #000;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .project-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .project {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            padding: 10px;
+            background: #eaeaea;
+        }
+
+        .project:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .project:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .project img {
+            object-fit: cover;
+            margin: 10px;
+        }
+
+        .project img.size1 {
+            width: 300px;
+            height: 200px;
+        }
+
+        .project img.size2 {
+            width: 320px;
+            height: 260px;
+        }
+
+        .project img.size3 {
+            width: 350px;
+            height: 230px;
+        }
+
+        .project img.size4 {
+            width: 320px;
+            height: 260px;
+        }
+
+        .project img.size5 {
+            width: 310px;
+            height: 300px;
+        }
+
+        .project img.size6 {
+            width: 300px;
+            height: 200px;
+        }
+
+        .project-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .project-content h4 {
+            margin: 0 0 10px 0;
+        }
+
+        .project-content p {
+            margin: 0;
+        }
+
+        ul {
+            text-align: left;
+        }
+
+        .bullet-container {
+            display: flex;
+        }
+
+        .bullet-container img {
+            margin: 20px;
+        }
+
+        .level-gen-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .image-gal {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .image-gal img {
+            width: 100%;
+            height: auto;
+        }
+
+        li {
+            margin: 10px;
+        }
+
+        .bottom-message {
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-left">
+        <p>Jake Ozer | jakobozer1@gmail.com | (630) 258-0136</p>
+    </div>
+    <div class="nav-right">
+        <a href="index.html">Home</a>
+        <a href="index.html#proj-header">Projects</a> 
+    </div>
+</nav>
+
+<div class="content">
+   <h1>Tavern Swap!</h1>
+   <h2>Unity, C#</h2>
+   <p>A 3D dialogue driven game where you choose your own adventure and swap between characters as you do so. This game was made in 48 hours for the GMTK 2023 jam on a team with two other people (an artist and musician).
+    <br><br>
+    I was in charge of building/programming the whole game in engine using the assets that my team members created, as well as designing and writing the narrative encounters. 
+    
+    </p>
+   <a href="https://lax919.itch.io/tavern-swap" target="_blank">Link to play/download</a>
+   <hr>
+   <ul>
+    <div class="bullet-container">
+        <li>Camera Direction:<br><br>The camera switch was one of the most important mechanics of the game and was a lot of fun to program. It works by having two preplaced cameras, one on the bartender and one on the guest. When it was time to switch who the camera would face, you would just need to change the priority of the two cameras on a global CameraManager, and Unity's Cinemachine camera package would handle the rest. It ended up looking pretty smooth, but got a little confusing at times due to working with a somewhat complex tool in Cinemachine. If I were to do it again a bit more simply, I would default to one camera and switch where it looked based on its path during a linear interpolation (lerp).
+        </li>
+        <img src="tsmedia/tscam.gif" width="330" height="200">
+    </div>
+    <div class="bullet-container">
+        <li>Misc. Notes:<br><br>This project was my first time working with someone actually in the games industry. Our artist (who I met randomly on GMTK's team finder), worked at a mid-level studio as a 3D environment artist for mobile games. It was a really cool experience and it was super nice of her to leave this message-
+        </li>
+    </div>
+    <div class ="bottom-message"><img src="tsmedia/tsmessage.png" width="600" height="95"></div>
+
+    <div class="image-gal">
+        <img src="tsmedia/sc (2).png" width="330" height="200">
+        <img src="tsmedia/sc (3).png" width="330" height="200">
+        <img src="tsmedia/sc (4).png" width="330" height="200">
+        <img src="tsmedia/sc (1).png" width="330" height="200">
+    </div>
+   
+   </ul>
+</div>
+
+<footer>
+    <p>External Links: Check out my <a href="https://www.linkedin.com/in/jake-ozer-966878262/" target="_blank">LinkedIn</a>, <a href="https://github.com/jake-ozer" target="_blank">GitHub</a> and <a href="https://lax919.itch.io" target="_blank">itch.io</a></p>
+</footer>
+
+</body>
+</html>
