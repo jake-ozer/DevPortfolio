@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jake Ozer</title>
+    <style>
+    @font-face {
+      font-family: Arcon;
+      src: url(Arcon-Regular.otf);
+    }
+
+    :root{
+      --bg:#eaeaea;
+      --max-content:1100px;
+      --gutter:16px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%; margin:0; padding:0}
+    body{
+      background:var(--bg);
+      font-family: Arcon, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      color:#111;
+      line-height:1.45;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    /* NAV */
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      padding:12px var(--gutter);
+      max-width:var(--max-content);
+      margin:0 auto;
+    }
+    .nav-left p{
+      margin:0;
+      font-size:0.95rem;
+    }
+    .nav-right a {
+        padding: 10px;  
+    }
+
+    /* CONTENT wrapper */
+    .content{
+      width:60%;
+      max-width:var(--max-content);
+      margin:18px auto;
+      text-align:center;
+      padding:0 var(--gutter);
+    }
+
+    h1{margin:0 0 6px; font-size:2.2rem}
+    h2{margin:0 0 12px; font-size:1.1rem; font-weight:600; color:#333}
+    p{margin:0 0 16px}
+
+    .breakline{width:70%; margin:12px auto}
+
+    a.play-link{display:inline-block; margin:8px 0 18px; padding:6px 12px; background:#111; color:#fff; text-decoration:none; border-radius:6px}
+
+    hr{border:0; border-top:1px solid rgba(0,0,0,0.12); margin:18px 0}
+
+    /* BULLET ROW (text + image) */
+    .bullet-container{
+      display:flex;
+      gap:16px;
+      align-items:flex-start;
+      margin-bottom:20px;
+      /* allow wrapping on narrow widths */
+      flex-wrap:wrap;
+    }
+    .bullet-container li{
+      list-style:disc;
+      margin:0;
+      padding:0;
+      flex:1 1 320px;  /* text column grows; will wrap nicely */
+      text-align:left;
+      min-width:0;     /* allow flex children to shrink */
+    }
+    .bullet-container img{
+      width:360px;
+      max-width:100%;
+      height:auto;
+      flex:0 0 360px;
+      object-fit:cover;
+    }
+
+    /* image gallery */
+    .image-gal{
+      display:grid;
+      grid-template-columns:repeat(2, 1fr);
+      gap:10px;
+      margin-top:6px;
+    }
+    .image-gal img{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+
+    footer{
+      max-width:var(--max-content);
+      margin:28px auto;
+      padding:0 var(--gutter);
+      text-align:left;
+    }
+    footer p{margin:0 0 20px; font-size:0.95rem}
+
+    /* ---------- Responsive breakpoints ---------- */
+
+    /* tablets / small laptops */
+    @media (max-width:1100px){
+      .content{width:80%}
+      .bullet-container img{width:320px; flex:0 0 320px}
+    }
+
+    /* narrow / mobile */
+    @media (max-width:700px){
+      nav{
+        flex-direction:column;
+        align-items:center;
+        text-align:center;
+        gap:8px;
+      }
+      .nav-right{order:2}
+      .nav-left{order:1}
+      .content{
+        width:96%;
+        margin:12px auto;
+        padding:0 12px;
+      }
+      h1{font-size:1.6rem}
+      h2{font-size:1rem}
+
+      /* bullet rows stack vertically: text first, image after */
+      .bullet-container{
+        flex-direction:column;
+        align-items:stretch;
+      }
+      .bullet-container li{
+        order:1;
+        flex:1 1 auto;
+      }
+      .bullet-container img{
+        order:2;
+        width:100%;
+        max-width:100%;
+        flex:0 0 auto;
+        margin-top:8px;
+      }
+
+      /* gallery becomes single column */
+      .image-gal{
+        grid-template-columns:1fr;
+      }
+    }
+
+    /* small phones — tighten spacing */
+    @media (max-width:400px){
+      body{font-size:15px}
+      .bullet-container img{border-radius:4px}
+      .nav-left p{font-size:0.85rem}
+    }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="nav-left">
+        <p>Jake Ozer | jakobozer1@gmail.com | (630) 258-0136</p>
+    </div>
+    <div class="nav-right">
+        <a href="index.html">Home</a>
+        <a href="index.html#proj-header">Projects</a>
+    </div>
+</nav>
+
+<div class="content">
+   <h1>Unreal Engine Quest System + Dialogue Tool (In Progress)</h1>
+   <h2>Unreal, C++, Blueprints</h2>
+   <p>A custom quest system and dialogue editor built in Unreal Engine that enables designers to create flexible, 
+                    branching dialogue trees tied to overarching quest logic. The tool supports interconnected conversations across multiple 
+                    NPCs, allowing player choices and narrative states to persist and influence quests at a system level.
+                    <br><br>
+                    The in-game dialogue/quest backend system was built entirely with C++, while UI and high level scripting was done with blueprints.
+                    The tool portion of the project is still in development, and this page will be updated when its complete. </p>
+   <hr>
+   <ul>
+    <div class="bullet-container">
+        <li>Unity Dialogue Tool:<br><br>This project started due to my initial creation of a similar dialogue tool using Unity's shader graph API for a game jam. I wanted to remake it in Unreal with C++ and Blueprints, this time with scalability and ease of use in mind. 
+        </li>
+        <img src="UDS_media/UDS_unityprecursor.gif" width="400" height="250">
+    </div>
+    <div class="bullet-container">
+        <li>Raw JSON -> Modular, decoupled quest data:<br><br>How the system works is that a singular QuestInitializer object will read from a variety of JSON files each representing a formatted quest in the game. The Initializer will translate that JSON file into a QuestInstance object, which holds data about what dialogue options are available, what NPCs are involved, and what the current stage of the specific quest is. Those Instance objects can then have their data drawn from during UI and menu sequences.
+<br><br>
+When the Dialogue tool for designers is finished, it will output this type of formatted JSON file for the C++ backend to parse through. 
+        </li>
+        <img src="UDS_media/UDS_json.png" width="350" height="200">
+    </div>
+    <div class="bullet-container">
+        <li>Communication between NPCs:<br><br>Because the NPCs themselves are not coupled directly to quests, one NPC can have a variety of dynamic quest choices associated with them at any given time. This allows for unique narrative scenarios, where NPCs can transfer their flow of the quest to other NPCs. There is no limit to what designers and writers can do with the system, and players have the benefit of having multiple options to pick from when talking to anybody.
+        </li>
+        <img src="UDS_media/UDS_NPCTalk.gif" width="350" height="200">
+    </div>
+   </ul>
+
+   <div class="image-gal">
+    <img src="UDS_Thumbnail3.png" width="330" height="200">
+    <img src="UDS_media/UDS_bp.png" width="330" height="200">
+    <img src="UDS_media/UDS_gal1.png" width="330" height="200">
+    <img src="UDS_media/UDS_code.png" width="330" height="200">
+
+    </div>
+
+</div>
+
+<footer>
+    <p>External Links: Check out my <a href="https://www.linkedin.com/in/jake-ozer-966878262/" target="_blank">LinkedIn</a>, <a href="https://github.com/jake-ozer" target="_blank">GitHub</a> and <a href="https://lax919.itch.io" target="_blank">itch.io</a></p>
+</footer>
+
+</body>
+</html>

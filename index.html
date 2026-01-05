@@ -6,188 +6,192 @@
     <title>Jake Ozer</title>
     <style>
        @font-face {
-    font-family: Arcon;
-    src: url(Arcon-Regular.otf);
-}
+            font-family: Arcon;
+            src: url(Arcon-Regular.otf);
+        }
 
-body {
-    background-color:#eaeaea;
-    display: flex;
-    flex-direction: column;
-    font-family: Arcon;
-    margin: 0;
-}
+        body {
+            background-color:#eaeaea;
+            display: flex;
+            flex-direction: column;
+            font-family: Arcon;
+            margin: 0;
+        }
 
-/* NAVIGATION ---------------------------- */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-    padding: 10px 15px;
-    flex-wrap: wrap;
-}
+        /* NAVIGATION ---------------------------- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            padding: 10px 15px;
+            flex-wrap: wrap;
+        }
 
-.nav-left {
-    font-size: 0.9rem;
-}
+        .nav-left {
+            font-size: 0.9rem;
+        }
 
-.nav-right a {
-    padding: 10px;
-}
+        .nav-right a {
+            padding: 10px;
+        }
 
-/* CONTENT ------------------------------- */
-.content {
-    text-align: center;
-    width: 60%;
-    margin: auto;
-}
+        /* CONTENT ------------------------------- */
+        .content {
+            text-align: center;
+            width: 60%;
+            margin: auto;
+        }
 
-h1,h2,h3 {
-    font-weight: normal;
-}
+        h1,h2,h3 {
+            font-weight: normal;
+        }
 
-h2, h3 {
-    font-size: larger;
-}
+        h2, h3 {
+            font-size: larger;
+        }
 
-.breakline {
-    width: 70%;
-}
+        .breakline {
+            width: 70%;
+        }
 
-/* VIDEOS -------------------------------- */
-.video-container {
-  width: 100%;
-  max-width: 560px;        
-  aspect-ratio: 16 / 9;    
-  background: #000;
-  margin: 0 auto 24px;     
-  display: block;
-  overflow: hidden;
-  border-radius: 4px;     
-}
+        /* VIDEOS -------------------------------- */
+        .video-container {
+            width: 100%;
+            max-width: 560px;
+            aspect-ratio: 16 / 9;
+            background: #000;
+            margin: 0 auto 24px;
+            display: block;
+            overflow: hidden;
+            border-radius: 4px;
+        }
 
-.video-container iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
-}
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
 
-/* PROJECTS ------------------------------- */
-.project-container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin: 20px 0;
-}
+        /* PROJECTS ------------------------------- */
+        .project-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 20px 0;
+        }
 
-.project {
-    display: flex;
-    align-items: center;
-    text-align: left;
-    padding: 10px;
-    background: #eaeaea;
-}
+        .project {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            padding: 10px;
+            background: #eaeaea;
+        }
 
-.project:nth-child(odd) { flex-direction: row; }
-.project:nth-child(even) { flex-direction: row-reverse; }
+        .project:nth-child(odd) { flex-direction: row; }
+        .project:nth-child(even) { flex-direction: row-reverse; }
 
-.project img {
-    object-fit: cover;
-    margin: 10px;
-    max-width: 100%;
-    height: auto;
-}
+        /* FORCE NMST SWAP */
+        .project.swap {
+            flex-direction: row;
+        }
 
-.project-content {
-    flex: 1;
-    padding: 20px;
-}
+        .project img {
+            object-fit: cover;
+            margin: 10px;
+            max-width: 100%;
+            height: auto;
+        }
 
-.project-content h4 {
-    margin: 0 0 10px 0;
-}
+        .project-content {
+            flex: 1;
+            padding: 20px;
+        }
 
-/* ---------------- MOBILE RESPONSIVE FIXES ---------------- */
-@media (max-width: 900px) {
-    .content {
-        width: 90%;
-    }
+        .project-content h4 {
+            margin: 0 0 10px 0;
+        }
 
-    .video-container {
-        max-width: 100%;
-        width: 100%;
-        margin-left: 0;
-        margin-right: 0;
-  }
-}
+        /* ---------------- MOBILE RESPONSIVE FIXES ---------------- */
+        @media (max-width: 900px) {
+            .content {
+                width: 90%;
+            }
 
-@media (max-width: 700px) {
-    nav {
-        flex-direction: column;
-        text-align: center;
-        gap: 5px;
-    }
+            .video-container {
+                max-width: 100%;
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
 
-    .nav-left {
-        font-size: 0.85rem;
-    }
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                text-align: center;
+                gap: 5px;
+            }
 
-    .project {
-        flex-direction: column !important;
-        text-align: center;
-    }
+            .nav-left {
+                font-size: 0.85rem;
+            }
 
-    .project-content {
-        padding: 10px;
-    }
+            .project {
+                flex-direction: column !important;
+                text-align: center;
+            }
 
-    .project img {
-        width: 100% !important;
-        height: auto !important;
-        margin: 0 0 10px 0;
-    }
+            .project-content {
+                padding: 10px;
+            }
 
-    h1 {
-        font-size: 1.8rem;
-    }
-}
+            .project img {
+                width: 100% !important;
+                height: auto !important;
+                margin: 0 0 10px 0;
+            }
 
-/* DESKTOP LIMITS ---------------------------- */
-@media (min-width: 900px) {
-    .video-container {
-        max-width: 560px;  
-        max-height: 315px;
-        margin: 0 auto;
-    }
-    .project img {
-        max-width: 350px;    
-        height: auto;
-    }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
 
-    .project {
-        max-width: 900px;    
-        margin: 0 auto;
-    }
+        /* DESKTOP LIMITS ---------------------------- */
+        @media (min-width: 900px) {
+            .video-container {
+                max-width: 560px;
+                max-height: 315px;
+                margin: 0 auto;
+            }
 
-    .content {
-        width: 60%;        
-    }
-}
-        
+            .project img {
+                max-width: 350px;
+                height: auto;
+            }
+
+            .project {
+                max-width: 900px;
+                margin: 0 auto;
+            }
+
+            .content {
+                width: 60%;
+            }
+        }
     </style>
 </head>
 <body>
 
 <nav>
     <div class="nav-left">
-        <p>Jake Ozer | jakobozer1@gmail.com | (630) 258-0136 | <a href="Resume_Jake_Ozer_2025.pdf">Resume</a></p>
+        <p>Jake Ozer | jakobozer1@gmail.com | (630) 258-0136 | <a href="Resume_Jake_Ozer 2026.pdf">Resume</a></p>
     </div>
     <div class="nav-right">
         <a href="index.html">Home</a>
         <a href="#proj-header">Projects</a>
-        <!--<a href="index.html#am-header">About Me</a>--> 
     </div>
 </nav>
 
@@ -195,107 +199,169 @@ h2, h3 {
    <img src="circleme2.png" width="200" height="200">
    <h1>Jake Ozer</h1>
    <hr class="breakline">
-   <p>Hey! I'm Jake.<br>Former Intern at EA - Respawn Entertainment<br>BS in Computer Science - Illinois State<br>President of <a href="https://redbirdlife.illinoisstate.edu/organization/gdc" target="_blank" rel="noopener noreferrer">Illinois State University's Game Dev Club</a>.</p>
-    
+   <p>
+        Hey! I'm Jake.<br>
+        Former Intern at EA - Respawn Entertainment<br>
+        BS in Computer Science - Illinois State<br>
+        President of
+        <a href="https://redbirdlife.illinoisstate.edu/organization/gdc" target="_blank" rel="noopener noreferrer">
+            Illinois State University's Game Dev Club
+        </a>.
+   </p>
+
     <h2>Want a quick demo of my latest projects? Check out my portfolio reels below.</h2>
+
     <div class="video-container">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/IvSiqkVjLfU?si=1D7HNIn1kjooH0Tg" title="Apex S26" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/O_PZQxvHjUM?si=ZHLHlbN8q116HUx6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
+
     <br><br>
+
     <div class="video-container">
-        <iframe src="https://www.youtube.com/embed/bxZwU94T0cw" title="Dev Portfolio 2024 Jake Ozer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/bxZwU94T0cw"
+            title="Dev Portfolio 2024 Jake Ozer" allowfullscreen></iframe>
     </div>
 
     <hr id="proj-header">
     <h3>Projects</h3>
     <p><i>*click on links to see more info*</i></p>
-    
+
     <div class="project-container">
+
         <div class="project">
-            <img src="apex_S26.png" alt="Project 1" class="size0">
+            <img src="apex_S26.png">
             <div class="project-content">
-                <h4><a href="ApexS26.html">Apex Legends: Season 26</a></h4>
-                <p>As a Technical Game Designer Intern at Respawn Entertainment in the Summer of 2025, I contributed to designing, prototyping, and scripting new mechanics/features into Season 26 of Apex Legends' Wildcard Gamemode.<br><br>
-                (More details on my involevement to be released in the future, due to NDA) </p>
-                
+                <h4><a href="ApexS26.html">Apex Legends: Season 26+27</a></h4>
+                <p>
+                    As a Technical Game Designer Intern at Respawn Entertainment in the Summer of 2025,
+                    I contributed to designing, prototyping, and scripting new mechanics/features into
+                    Season 26 of Apex Legends' Wildcard Gamemode.<br><br>
+                    (More details on my involevement to be released in the future, due to NDA)
+                </p>
             </div>
         </div>
+
         <div class="project">
-            <img src="aftw_media/thumbnail.jpg" alt="Project 1" class="size0">
+            <img src="UDS_Thumbnail3.png">
             <div class="project-content">
-                <h4><a href="aftw.html">Alchemy for the Wicked</a></h4>
-                <p>A first person puzzle game about brewing poisons for the evil denizens of a fantasy world. Created in one week for game dev club's Summer 2024 game jam with a team of four, I served as the team's lead programmer and secondary designer.<br><br>
-                    My biggest highlights on this project included creating a clean and practical ingredient system for the backend, developing the in-game alchemy book UI/camera system, and designing the main gameplay loop. </p>
-                <p><br><b>00:24 in portfolio reel</b></p>
-            </div>
-        </div>
-        <div class="project">
-            <img src="intvalet.png" alt="Project 1" class="size1">
-            <div class="project-content">
-                <h4><a href="intvalet.html">Interstellar Valet</a></h4>
-                <p>A top down interactive simulator where you act as a valet for spaceships. This game was created over the course of a semester for game dev club's challenge project, of which I was solely a programmer and digital/technical artist at the time.<br><br> My most successful contributions on this project included creating and implementing the art for the score messages when players earn or lose points, as well as designing the frontend and backend for the in game key system. </p>
-                <p><br><b>00:54 in portfolio reel</b></p>
-            </div>
-        </div>
-        <div class="project">
-            <img src="nmst.png" alt="Project 2" class="size2">
-            <div class="project-content">
-                <h4><a href="nmst.html">Necro-Mage: Stronger Together!</a></h4>
-                <p>An action game in which you are able to defeat enemies and resurrect them to fight by your side. The project was created in the span of one week for game dev club's Winter 2023 game jam. I served as a programmer/designer for a small group consisting of myself and three others.
+                <h4><a href="UDS.html">Unreal Engine Quest System + Dialogue Tool (In Progress)</a></h4>
+                <p>
+                    A custom quest system and dialogue editor built in Unreal Engine that enables designers to create flexible, 
+                    branching dialogue trees tied to overarching quest logic. The tool supports interconnected conversations across multiple 
+                    NPCs, allowing player choices and narrative states to persist and influence quests at a system level.
                     <br><br>
-                    My most notable contributions to the game were developing the AI targeting system, engineering the level generation, designing the combat encounters, and implementing all of the art and animations created by our artist.</p>
-                    <p><br><b>01:36 in portfolio reel</b></p>
+                    The in-game dialogue/quest backend system was built entirely with C++, while UI and high level scripting was done with blueprints.
+                    The tool portion of the project is still in development, and this page will be updated when its complete.
+                </p>
             </div>
         </div>
+
         <div class="project">
-            <img src="astar.png" alt="Project 3" class="size3">
-            <div class="project-content">
-                <h4><a href="astar.html">A* Pathfinding Simulator</a></h4>
-                <p>An algorithmic simulator demonstrating how the A* pathfinding algorithm acts on a grid based graph. This was created as a hobby project by myself due to an interest in the algorithm after completing a 1600 word research paper about it in my Data Structures and Algorithms course.
-                    <br><br>
-                    The big focuses for this project were creating a clean user interface and allowing for animations to be paused/slowed down in an effort to make this a useful and satisfying educational tool.</p>
-                    <p><br><b>02:15 in portfolio reel</b></p>
-            </div>
-        </div>
-        <div class="project">
-            <img src="ts.png" alt="Project 4" class="size4">
-            <div class="project-content">
-                <h4><a href="tavernswap.html">Tavern Swap!</a></h4>
-                <p>A 3D dialogue driven game where you choose your own adventure and swap between characters as you do so. This game was made in 48 hours for the GMTK 2023 jam on a team with two other people (an artist and musician).
-                    <br><br>
-                    I was in charge of building/programming the whole game in engine using the assets that my team members created, as well as designing and writing the narrative encounters. 
-                    
-                    </p>
-                    <p><br><b>02:59 in portfolio reel</b></p>
-            </div>
-        </div>
-        <div class="project">
-            <img src="skyrimThumbnail.png" alt="Project 5" class="size5">
+            <img src="skyrimThumbnail.png">
             <div class="project-content">
                 <h4><a href="wyhaol.html">Would You Help an Old Lady? - Skyrim SE Quest Mod</a></h4>
-                <p>A mod for Skyrim Special Edition that adds a custom made quest to the game involving the rescue of an old woman afflicted by a curse. Developed over the course of a few months as a hobby project by myself, the quest was written and voice acted entirely by me.
-                    <br><br>
-                    The highlights of my work on this project include my narrative design in writing the quest, familiarizing myself with AAA development and level design tools, and being able to program quest encounters in Papyrus (Bethesda's proprietary scripting language). This mod also stands as one of my most popular projects, accruing 4000+ downloads with more coming each passing day.</p>
-                    <p><br><b>03:25 in portfolio reel</b></p>
+                <p>
+                    A mod for Skyrim Special Edition that adds a custom made quest to the game involving
+                    the rescue of an old woman afflicted by a curse. Developed over the course of a few
+                    months as a hobby project by myself, the quest was written and voice acted entirely
+                    by me.<br><br>
+                    The highlights of my work on this project include my narrative design in writing the
+                    quest, familiarizing myself with AAA development and level design tools, and being
+                    able to program quest encounters in Papyrus (Bethesda's proprietary scripting language).
+                    This mod also stands as one of my most popular projects, accruing 4000+ downloads with
+                    more coming each passing day.
+                </p>
             </div>
         </div>
+
         <div class="project">
-            <img src="cos.png" alt="Project 6" class="size6">
+            <img src="aftw_media/thumbnail.jpg">
+            <div class="project-content">
+                <h4><a href="aftw.html">Alchemy for the Wicked</a></h4>
+                <p>
+                    A first person puzzle game about brewing poisons for the evil denizens of a fantasy
+                    world. Created in one week for game dev club's Summer 2024 game jam with a team of four,
+                    I served as the team's lead programmer.<br><br>
+                    My biggest highlights on this project included creating a clean and practical ingredient
+                    system for the backend, developing the in-game alchemy book UI/camera system, and
+                    designing the main gameplay loop.
+                </p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="astar.png">
+            <div class="project-content">
+                <h4><a href="astar.html">A* Pathfinding Simulator</a></h4>
+                <p>
+                    An algorithmic simulator demonstrating how the A* pathfinding algorithm acts on a
+                    grid based graph. This was created as a hobby project by myself due to an interest
+                    in the algorithm after completing a 1600 word research paper about it in my Data
+                    Structures and Algorithms course.<br><br>
+                    The big focuses for this project were creating a clean user interface and allowing
+                    for animations to be paused/slowed down in an effort to make this a useful and
+                    satisfying educational tool.
+                </p>
+            </div>
+        </div>
+
+        <!-- NMST (IMAGE SWAPPED) -->
+        <div class="project">
+            <img src="nmst.png">
+            <div class="project-content">
+                <h4><a href="nmst.html">Necro-Mage: Stronger Together!</a></h4>
+                <p>
+                    An action game in which you are able to defeat enemies and resurrect them to fight
+                    by your side. The project was created in the span of one week for game dev club's
+                    Winter 2023 game jam. I served as a programmer/designer for a small group consisting
+                    of myself and three others.<br><br>
+                    My most notable contributions to the game were developing the AI targeting system,
+                    engineering the level generation, designing the combat encounters, and implementing
+                    all of the art and animations created by our artist.
+                </p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="ts.png">
+            <div class="project-content">
+                <h4><a href="tavernswap.html">Tavern Swap!</a></h4>
+                <p>
+                    A 3D dialogue driven game where you choose your own adventure and swap between
+                    characters as you do so. This game was made in 48 hours for the GMTK 2023 jam on a
+                    team with two other people (an artist and musician).<br><br>
+                    I was in charge of building/programming the whole game in engine using the assets
+                    that my team members created, as well as designing and writing the narrative encounters.
+                </p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="cos.png">
             <div class="project-content">
                 <h4><a href="cos.html">The Crypts of Severus</a></h4>
-                <p>A fantasy dungeon crawler where only when you reach the end of the dungeon, enemies will attack. This game was initially made in one week for game dev club's Summer 2023 jam, but was later improved upon over the rest of that summer. I did everything on this project except for the music. 
-                    <br><br>
-                    My main accomplishments with this game included the lighting design, implementation of satisfying juice and crunch mechanics, designing varying enemy types and boss encounters, and programming the backend for the in game enchantment system.</p>
-                    <p><br><b>04:37 in portfolio reel</b></p>
+                <p>
+                    A fantasy dungeon crawler where only when you reach the end of the dungeon, enemies
+                    will attack. This game was initially made in one week for game dev club's Summer 2023
+                    jam, but was later improved upon over the rest of that summer. I did everything on this
+                    project except for the music.<br><br>
+                    My main accomplishments with this game included the lighting design, implementation
+                    of satisfying juice and crunch mechanics, designing varying enemy types and boss
+                    encounters, and programming the backend for the in game enchantment system.
+                </p>
             </div>
         </div>
+
     </div>
-    <hr id="am-header">
-    <!--<h3>About Me</h3>-->
 </div>
 
 <footer>
-    <p>External Links: Check out my <a href="https://www.linkedin.com/in/jake-ozer-966878262/" target="_blank">LinkedIn</a>, <a href="https://github.com/jake-ozer" target="_blank">GitHub</a> and <a href="https://lax919.itch.io" target="_blank">itch.io</a></p>
+    <p>
+        External Links: Check out my
+        <a href="https://www.linkedin.com/in/jake-ozer-966878262/" target="_blank">LinkedIn</a>,
+        <a href="https://github.com/jake-ozer" target="_blank">GitHub</a> and
+        <a href="https://lax919.itch.io" target="_blank">itch.io</a>
+    </p>
 </footer>
 
 </body>
